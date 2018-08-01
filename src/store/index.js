@@ -30,12 +30,12 @@ export default new Vuex.Store({
   },
   actions: {
     getList ({commit}) {
-      axios.jsonp('http://datainfo.duapp.com/shopdata/getclass.php', {emulateJSON: true})
+      axios.get('http://datainfo.duapp.com/shopdata/getclass.php', {emulateJSON: true})
         .then(response => {
           console.log(response.data)
           commit('getList', {
             res: response.data,
-            type :'kList'
+            type :'kList' //偷懒不想再写一个mutations方法
           })
         }, response => {
           console.log('error')
@@ -47,7 +47,7 @@ export default new Vuex.Store({
           console.log(response.data)
           commit('getList', {
             res: response.data,
-            type :'listLi'
+            type :'listLi' //偷懒不想再写一个mutations方法
           })
         }, response => {
           console.log('error')

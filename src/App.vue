@@ -15,8 +15,14 @@
                             <span>公孙离</span>
                         </template>
                         <!--这个to属性不生效，升级3.0也不行，好烦哦-->
-                        <MenuItem name="Li-1" to="/li-1" @click.native='go("别浪" ,"Li-1")'>别浪</MenuItem>
-                        <MenuItem name="Li-2" to="/li-2" @click.native='go("猥琐发育" ,"Li-2")'>猥琐发育</MenuItem>
+                        <MenuItem name="Li-1" to="/li-1" @click.native='go("别浪" ,"Li-1")'>
+                            <Icon type="ios-flower"></Icon>
+                            <span>别浪</span>
+                        </MenuItem>
+                        <MenuItem name="Li-2" to="/li-2" @click.native='go("猥琐发育" ,"Li-2")'>
+                            <Icon type="ios-analytics"></Icon>
+                            <span>猥琐发育</span>
+                        </MenuItem>
                     </Submenu>
                     <!-- <router-link to="/hello">你好靓仔</router-link> -->
                     <MenuItem name="ZhongKui" to="/" @click.native='go("钟馗" ,"ZhongKui" ,true)'>
@@ -32,8 +38,14 @@
                             <Icon type="ios-navigate"></Icon>
                             <span>百里守约</span>
                         </template>
-                        <MenuItem name="Li-1" to="Li-1" @click.native='go("阿凯啊" ,"Li-1")'>阿凯啊</MenuItem>
-                        <MenuItem name="Li-2" @click.native='go("你的厨艺" ,"Li-2")'>你的厨艺</MenuItem>
+                        <MenuItem name="Li-1" to="Li-1" @click.native='go("阿凯啊" ,"Li-1")'>
+                            <Icon type="search"></Icon>
+                            <span>阿凯啊</span>
+                        </MenuItem>
+                        <MenuItem name="Li-2" @click.native='go("你的厨艺" ,"Li-2")'>
+                            <Icon type="ios-rose"></Icon>
+                            <span>你的厨艺</span>
+                        </MenuItem>
                     </Submenu>
                 </Menu>
             </Sider>
@@ -42,7 +54,7 @@
                     <Icon @click.native="collapsedSider" :class="rotateIcon" class='ml20' type="navicon-round" size="24"></Icon>
                     <div class='flex1 flex justs ml20'>
                         <Breadcrumb :style="{margin: '24px 0'}">
-                            <BreadcrumbItem v-for="item in breadcrumbItem">{{item}}</BreadcrumbItem>
+                            <BreadcrumbItem v-for="item in breadcrumbItem" >{{item}}</BreadcrumbItem>
                         </Breadcrumb>
                         <ul class='flex alic inline'>
                         <li class='mr20'>new</li>
